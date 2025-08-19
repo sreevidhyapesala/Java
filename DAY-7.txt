@@ -1,0 +1,131 @@
+class Box
+{
+float length , breadth;
+public Box(){ //Default
+length = 2;
+breadth = 5;
+}
+public Box(float x,float y) // Parameterized
+{
+7
+length = x;
+breadth = y;
+}
+Box(float x)
+{
+length = breadth = x;
+}
+float area(){
+return length+breadth;
+}
+}
+class Constructor_Overloading {
+public static void main(String[] args) {
+Box o = new Box();
+System.out.println("Area : "+ o.area());
+Box o1 = new Box(3,6);
+System.out.println("Area : "+ o1.area());
+Box o2 = new Box(3);
+System.out.println("Area : "+ o2.area());
+}
+}
+*/
+output:
+Area : 7.0
+Area : 9.0
+8
+Area : 6.0
+4. Array of Objects
+➤ Concept:
+ Using arrays to store multiple objects.
+/*
+//Array of object
+class Student
+{
+public int roll_no;
+public String name;
+Student(int roll_no,String name)
+{
+this.roll_no = roll_no;
+this.name = name;
+}
+void print()
+{
+System.out.println("Name : "+name);
+System.out.println("Roll No : "+roll_no);
+System.out.println(". ............................. ");
+}
+}
+class array_objects {
+9
+public static void main(String[] args) {
+Student o = new Student(525111,"Narayana");
+o.print();
+Student o1 = new Student(525621,"Subbu");
+o1.print();
+}
+}
+*/
+/*
+//Array of object
+class Student
+{
+public int roll_no;
+public String name;
+Student(int roll_no,String name)
+{
+this.roll_no = roll_no;
+this.name = name;
+}
+void print()
+{
+System.out.println("Name : "+name);
+System.out.println("Roll No : "+roll_no);
+10
+System.out.println(". ............................. ");
+}
+}
+class array_objects {
+public static void main(String[] args) {
+Student[] o;
+o = new Student[5];
+o[0] = new Student(10,"Rarayana");
+o[1] = new Student(11,"Hare_Ram");
+o[2] = new Student(12,"Raman");
+o[3] = new Student(13,"Subbu");
+o[4] = new Student(14,"Kovidha");
+for (int i=0 ;i< o.length; i++)
+o[i].print();
+}
+}
+*/
+5. Inheritance (Single, Multilevel, Hierarchical)
+➤ Single Inheritance
+ One class inherits from another.
+/*
+//Single Inheritance in java
+//Example (son can access father asserts)
+class Father {
+11
+public void house() {
+System.out.println("Have Own 2BHK House.");
+}
+}
+class Son extends Father
+{
+public void car()
+{
+System.out.println("Have Own Audi car.");
+}
+}
+class single_inheritance {
+public static void main(String[] args) {
+Son o = new Son();
+o.car();
+o.house();
+}
+}
+*/
+output:
+Have Own Audi car.
+Have Own 2BHK House

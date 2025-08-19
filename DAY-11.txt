@@ -1,0 +1,78 @@
+public class sort {
+public static void main(String[] args) {
+int[] arr = {5, 4, 3, 2, 1}; // Input array
+int n = arr.length; // Size of the array
+int temp; // Temporary variable for swapping
+int swapCount = 0; // Counter to track the number of swaps
+12
+// Bubble Sort Algorithm
+for (int i = 0; i < n - 1; i++) {
+for (int j = 0; j < n - i - 1; j++) {
+if (arr[j] > arr[j + 1]) {
+// Swap arr[j] and arr[j + 1]
+temp = arr[j];
+arr[j] = arr[j + 1];
+arr[j + 1] = temp;
+swapCount++; // Increment the swap counter
+}
+}
+}
+// Print the sorted array
+System.out.print("Array in ascending order: ");
+for (int i = 0; i < n; i++) {
+System.out.print(arr[i] + " ");
+}
+System.out.println("\nSwapcount: " + swapCount); // Print the total number of swaps
+}
+}
+Output:
+Array in ascending order: 1 2 3 4 5
+Swapcount: 10
+
+
+2
+element. Though simple, Selection Sort is not the most efficient for large datasets, but it
+offers a good understanding of sorting principles.
+Selection Sort Algorithm Explanation
+1. Initialization: Start with the first element of the array.
+2. Find the Minimum: Search the unsorted portion of the array to find the smallest element.
+3. Swap: Swap the found smallest element with the first unsorted element.
+4. Repeat: Move to the next unsorted element and repeat the process until the
+entire array is sorted.
+public class SelectionSort {
+public static void main(String[] args) {
+int[] arr = {20, 12, 10, 15, 2}; // Input array
+int n = arr.length; // Size of the array
+int temp; // Temporary variable for swapping
+int swapCount = 0; // Counter to track the number of swaps
+
+// Selection Sort Algorithm
+for (int i = 0; i < n - 1; i++) {
+int min = i; // Assume the current index is the minimum
+for (int j = i + 1; j < n; j++) {
+if (arr[j] < arr[min]) {
+min = j; // Update the index of the minimum element
+}
+}
+// Swap the found minimum element with the element at index i
+if (min != i) {
+temp = arr[i];
+arr[i] = arr[min];
+arr[min] = temp;
+swapCount++; // Increment the swap counter
+}
+}
+// Output the sorted array
+System.out.println("Sorted array in ascending order:");
+for (int i = 0; i < n; i++) {
+System.out.print(arr[i] + " ");
+}
+System.out.println("\nSwapcount: " + swapCount); // Print the number of swaps
+}
+}
+}
+Output:
+Sorted array in ascending order:
+2 10 12 15 20
+Swapcount: 4
+

@@ -1,0 +1,80 @@
+String Functions
+Java Code:
+class Main {
+public static void main(String[] args) {
+String a = "cse class";
+String b = "Cse class";
+System.out.println("a : "+a);
+System.out.println("b : "+b);
+System.out.println("a HashCode "+a.hashCode());
+System.out.println("b HashCode "+b.hashCode());
+System.out.println("Equal : "+a.equals(b));
+System.out.println("Equal Ignore case : "+a.equalsIgnoreCase(b));
+System.out.println("Length : "+a.length());
+System.out.println("CharAt : "+a.charAt(0));
+System.out.println("Uppercase : "+a.toUpperCase());
+System.out.println("Lowercase : "+a.toLowerCase());
+System.out.println("Replace : "+a.replace("Cse","Ece"));
+System.out.println("Contains : "+a.contains("Cse"));
+System.out.println("Empty : "+a.isEmpty());
+System.out.println("startsWith : "+a.startsWith("Cs"));
+System.out.println("Substring : "+a.substring(4));
+System.out.println("Substring : "+a.substring(0,5));
+}
+}
+Expected Output:
+Output:
+a : cse class
+b : Cse class
+a HashCode: [Hash of a]
+b HashCode: [Hash of b]
+Equal : false
+Equal Ignore case : true
+Length : 9
+CharAt : c
+11
+Uppercase : CSE CLASS
+Lowercase : cse class
+Replace : cse class
+Contains : false
+Empty : false
+startsWith : false
+Substring : class
+Substring : cse c
+2. String to Char Array
+Java Code:
+class string_char_array {
+public static void main(String[] args) {
+String a = "Cse class";
+char[] carry = a.toCharArray();
+for(char c : carry){
+System.out.println(c);
+}
+}
+}
+Expected Output:
+Output:
+C
+s
+e
+c
+l
+a
+s
+s
+3. Trim and Length
+Java Code:
+class string_trim_example {
+public static void main(String[] args) {
+String a = " Cse ";
+System.out.println("Length : "+a.length());
+System.out.println("a Trim :"+a.trim());
+System.out.println("a Trim length :"+a.trim().length());
+}
+}
+12
+Expected Output:
+Output:
+Length : 5
+a Trim :Cse
+a Trim length :3

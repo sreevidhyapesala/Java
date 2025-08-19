@@ -1,0 +1,101 @@
+String Methods
+public class StringMethods {
+public static void main(String[] args) {
+String str = "Hello World";
+System.out.println("Length: " + str.length()); // 11
+System.out.println("Uppercase: " + str.toUpperCase()); // HELLO
+WORLD
+System.out.println("Lowercase: " + str.toLowerCase()); // hello
+world
+System.out.println("Substring: " + str.substring(0, 5)); // Hello
+System.out.println("Replace: " + str.replace("World", "Java")); //
+Hello Java
+System.out.println("Contains: " + str.contains("Hello")); // true
+}
+}
+Math Methods
+public class MathMethods {
+public static void main(String[] args) {
+System.out.println("Max: " + Math.max(10, 20)); // 20
+System.out.println("Min: " + Math.min(10, 20)); // 10
+System.out.println("Absolute: " + Math.abs(-15)); // 15
+System.out.println("Square root: " + Math.sqrt(16)); // 4.0
+System.out.println("Power: " + Math.pow(2, 3)); // 8.0
+System.out.println("Random: " + Math.random()); // Random
+decimal
+}
+}
+Array Methods
+import java.util.Arrays;
+public class ArrayMethods {
+public static void main(String[] args) {
+int[] arr = {5, 2, 8, 1, 9};
+System.out.println("Original: " + Arrays.toString(arr));
+Arrays.sort(arr);
+System.out.println("Sorted: " + Arrays.toString(arr));
+int index = Arrays.binarySearch(arr, 8);
+System.out.println("Index of 8: " + index);
+}
+}
+34
+5. Method Overloading
+Method overloading allows multiple methods with the same name but different parameters.
+class Calculator {
+// Method 1: Two integers
+public int add(int a, int b) {
+return a + b;
+}
+// Method 2: Three integers
+public int add(int a, int b, int c) {
+return a + b + c;
+}
+// Method 3: Two doubles
+public double add(double a, double b) {
+return a + b;
+}
+// Method 4: Two strings
+public String add(String a, String b) {
+return a + b;
+}
+}
+public class OverloadingExample {
+public static void main(String[] args) {
+Calculator calc = new Calculator();
+System.out.println("Two ints: " + calc.add(5, 3)); // 8
+System.out.println("Three ints: " + calc.add(5, 3, 2)); // 10
+System.out.println("Two doubles: " + calc.add(5.5, 3.3)); // 8.8
+System.out.println("Two strings: " + calc.add("Hello", "World"));
+// HelloWorld
+}
+}
+7. Advanced Method Concepts
+Recursive Methods
+Methods that call themselves:
+class RecursiveExample {
+public static int factorial(int n) {
+if (n <= 1) {
+return 1;
+} else {
+return n * factorial(n - 1);
+}
+}
+public static void main(String[] args) {
+System.out.println("Factorial of 5: " + factorial(5)); // 120
+}
+35
+}
+Variable Arguments (Varargs)
+Methods that accept variable number of arguments:
+class VarargsExample {
+public static int sum(int... numbers) {
+int total = 0;
+for (int num : numbers) {
+total += num;
+}
+return total;
+}
+public static void main(String[] args) {
+System.out.println("Sum of 2 numbers: " + sum(5, 3)); // 8
+System.out.println("Sum of 4 numbers: " + sum(1, 2, 3, 4)); // 10
+}
+}

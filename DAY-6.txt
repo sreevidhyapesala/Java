@@ -1,0 +1,122 @@
+//class & object in java
+class Rectangle
+{
+int length,width;
+void getDetails(int x,int y){
+length = x;
+width = y;
+}
+int area(){
+int a = length * width;
+return a;
+}
+2
+}
+class class_object{
+public static void main(String [] args){
+Rectangle o1 = new Rectangle();
+o1.length = 10;
+o1.width = 20;
+System.out.println("Area of Rectangle :"+o1.area());
+Rectangle o2 = new Rectangle();
+o2.getDetails(20,30);
+System.out.println("Area of Rectangle :"+o2.area());
+} }
+*/
+output:
+Area of Rectangle :200
+Area of Rectangle :600
+
+
+class ShapeRectangle
+{
+3
+private int length,width;
+int area(){
+int a = length * width;
+return a;
+}
+}
+class class_object {
+public static void main(String[] args) {
+ShapeRectangle o1 = new ShapeRectangle();
+o1.length = 10;
+o1.width = 20;
+System.out.println("Area of Rectangle :" + o1.area());
+}
+}
+*/
+output:
+Error
+/*
+//Data Hiding Getter and Setter in java(in private)
+class ShapeRectangle
+{
+private int length,width;
+//Getter Method
+int getLength() {
+return length;
+4
+}
+int getWidth() {
+return width;
+}
+//Setter Method
+void setLength(int l){
+if(l > 0)
+length = l;
+else
+length = 0;
+}
+void setWidth(int w){
+if(w > 0)
+width = w;
+else
+width = 0;
+}
+int area(){
+int a = length * width;
+return a;
+}
+}
+class get_set{
+public static void main(String [] args){
+ShapeRectangle o1 = new ShapeRectangle();
+o1.setLength(-10);
+5
+o1.setWidth(20);
+System.out.println("Length :"+ o1.getLength());
+System.out.println("Width :"+ o1.getWidth());
+System.out.println("Area of Rectangle :"+ o1.area());
+}
+}
+*/
+output:
+Length :0
+Width :20
+Area of Rectangle :0
+/*
+//Constructor in java
+class RectangleShape{
+int length , width;
+RectangleShape() {
+System.out.println("Constructor Called");
+length = 2;
+width = 10;
+}
+int area() {
+int a = length * width ;
+return a;
+}
+}
+6
+class constructor {
+public static void main(String[] args) {
+RectangleShape o1 = new RectangleShape();
+System.out.println("Area of Rectangle : "+ o1.area());
+}
+}
+*/
+output:
+Constructor Called
+Area of Rectangle : 20

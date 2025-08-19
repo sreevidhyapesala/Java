@@ -1,0 +1,140 @@
+import java.util.Scanner;
+class MatrixMultiplication {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter the Rows: ");
+int r = sc.nextInt();
+System.out.print("Enter the Columns: ");
+int c = sc.nextInt();
+int[][] a = new int[r][c];
+int[][] b = new int[r][c];
+int[][] result = new int[r][c];
+// Input for matrix A
+for(int i = 0; i < r; i++){
+4
+for(int j = 0; j < c; j++){
+System.out.print("Enter the ["+i+"]["+j+"] a matrix: ");
+a[i][j] = sc.nextInt();
+}
+}
+// Input for matrix B
+for(int i = 0; i < r; i++){
+for(int j = 0; j < c; j++){
+System.out.print("Enter the ["+i+"]["+j+"] b matrix: ");
+b[i][j] = sc.nextInt();
+}
+}
+// Matrix multiplication and display
+for(int i = 0; i < r; i++){
+for(int j = 0; j < c; j++){
+for(int k = 0; k < c; k++){
+result[i][j] += a[i][k] * b[k][j];
+}
+System.out.print(result[i][j] + " ");
+}
+System.out.println();
+}
+}
+}
+Sample Output:
+Enter the Rows: 2
+Enter the Columns: 2
+Enter the [0][0] a matrix: 1
+Enter the [0][1] a matrix: 2
+Enter the [1][0] a matrix: 3
+Enter the [1][1] a matrix: 4
+Enter the [0][0] b matrix: 1
+Enter the [0][1] b matrix: 2
+Enter the [1][0] b matrix: 3
+Enter the [1][1] b matrix: 4
+7 10
+15 22
+
+
+
+import java.util.*;
+class MinMaxFinder {
+public static void main(String[] args) {
+int a[] = {1, 423, 6, 46, 34, 23, 13, 53, 4};
+// Using built-in sort function
+Arrays.sort(a);
+// After sorting: first element = minimum, last element = maximum
+System.out.println("min-" + a[0] + " max-" + a[a.length-1]);
+}
+}
+6
+Output: min-1 max-423
+Sorting Array in Ascending Order (Bubble Sort)
+import java.util.Arrays;
+class AscendingOrder {
+public static void main(String[] args) {
+int[] a = {8, 6, 4, 29, 2, 16, 78};
+System.out.println("Before Sort: " + Arrays.toString(a));
+// Bubble sort implementation
+for(int i = 0; i < a.length; i++) {
+for (int j = i + 1; j < a.length; j++) {
+if (a[i] > a[j]) {
+int temp = a[i];
+a[i] = a[j];
+a[j] = temp;
+}
+}
+}
+System.out.println("After Sort: " + Arrays.toString(a));
+}
+}
+Separating Negative and Positive Numbers
+import java.util.*;
+public class NegativePositiveSeparator {
+public static void move(int[] arr) {
+Arrays.sort(arr); // Sorts in ascending order
+}
+public static void main(String[] args) {
+int[] arr = { -1, 2, -3, 4, 5, 6, -7, 8, 9 };
+move(arr);
+for (int e : arr)
+System.out.print(e + " ");
+}
+}
+Output: -7 -3 -1 2 4 5 6 8 9
+
+
+
+
+ String Character Analysis
+Counting Different Character Types
+class CharacterAnalyzer {
+public static void main(String[] args) {
+int upper = 0, lower = 0, space = 0, digit = 0, symbol = 0;
+String s = "Hi Hello CSD & AIDS**146";
+for(char c : s.toCharArray()){
+if(Character.isUpperCase(c)){
+upper++;
+}
+else if(Character.isLowerCase(c)){
+lower++;
+}
+else if(Character.isDigit(c)){
+7
+digit++;
+}
+else if(Character.isSpace(c)){
+space++;
+}
+else{
+symbol++;
+}
+}
+System.out.println("Upper: " + upper);
+System.out.println("Lower: " + lower);
+System.out.println("Digit: " + digit);
+System.out.println("Space: " + space);
+System.out.println("Symbol: " + symbol);
+}
+}
+Output:
+Upper: 9
+Lower: 5
+Digit: 3
+Space: 4
+Symbol: 3
